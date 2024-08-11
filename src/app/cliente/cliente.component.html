@@ -1,0 +1,24 @@
+<h2>Cadastro de Clientes</h2>
+
+ {{mensagem}}
+
+<div class="mb-3">
+  <label for="nome" class="form-label">Nome</label>
+  <input type="text" class="form-control" id="nome" [(ngModel)]="nome">
+</div>
+
+<div class="mb-3">
+  <label for="email" class="form-label">E-mail</label>
+  <input type="text" class="form-control" id="email" [(ngModel)]="email">
+</div>
+
+<div class="row">
+  <div class="col-2">
+    <button class="btn btn-primary" (click)="salvar()">Salvar</button>
+  </div>
+  <div class="col">
+    <div *ngIf="loading" class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+</div>
